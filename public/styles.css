@@ -1,0 +1,117 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(176,197,255,1) 18%, rgba(17,152,255,1) 42%, rgba(0,0,0,1) 100%);
+    background-size: cover;
+    opacity: 0;
+    animation: fadeIn 1s forwards, backgroundAnimation 1.5s ease-in-out;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient();
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideIn 0.5s forwards 0.5s;
+    border-radius: 15px;
+    border: solid #8beeff;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 1s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 1.5s;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    color: rgb(0, 0, 0);
+}
+
+input:focus {
+    border-color: #000000;
+}
+
+button {
+    padding: 10px;
+    background-color: #3a73af;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, rgba(176,197,255,1) 0%, rgba(17,152,255,1) 0%, rgba(0,0,0,1) 99%);
+}
+
+a {
+    color: #dbdbdb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #00266d;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
